@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ken-spikes-swagger", "ken-spikes-swagger\ken-spikes-swagger.njsproj", "{6D164DA4-C4FB-4F13-A13F-8E8DAFDD29F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ken.Spikes.Swagger", "ken.Spikes.Swagger\ken.Spikes.Swagger.csproj", "{2DA4D55A-59D3-41EB-A5FF-E93AD7517F21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6D164DA4-C4FB-4F13-A13F-8E8DAFDD29F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D164DA4-C4FB-4F13-A13F-8E8DAFDD29F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D164DA4-C4FB-4F13-A13F-8E8DAFDD29F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA4D55A-59D3-41EB-A5FF-E93AD7517F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA4D55A-59D3-41EB-A5FF-E93AD7517F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA4D55A-59D3-41EB-A5FF-E93AD7517F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA4D55A-59D3-41EB-A5FF-E93AD7517F21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

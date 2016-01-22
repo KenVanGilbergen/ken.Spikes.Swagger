@@ -36,5 +36,9 @@ node_modules
 _Resharper.*
 .ntvs_analysis.dat
 *.suo
+*.user
 /packages
 /ken-spikes-swagger/obj
+/ken.Spikes.Swagger/bin
+/ken.Spikes.Swagger/obj
+

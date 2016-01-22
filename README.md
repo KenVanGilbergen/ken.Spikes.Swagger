@@ -11,4 +11,7 @@ Playing with Swagger in NodeJs and C#
 
 <h2>C#</h2>
 
+* ASP.NET Web Application > Empty
+* Install-Package Microsoft.AspNet.WebApi.Owin
+* Install-Package Microsoft.Owin.Host.SystemWeb
 * Install-Package Swashbuckle
