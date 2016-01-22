@@ -41,4 +41,7 @@ _Resharper.*
 /ken-spikes-swagger/obj
 /ken.Spikes.Swagger/bin
 /ken.Spikes.Swagger/obj
+/swagger.Client.CSharp/bin
+/swagger.Client.CSharp/obj
+
 
