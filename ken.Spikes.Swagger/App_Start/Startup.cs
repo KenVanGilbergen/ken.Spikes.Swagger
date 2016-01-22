@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Net;
+using System.Web.Http;
 using Owin;
 
 namespace ken.Spikes.Swagger
@@ -9,6 +10,7 @@ namespace ken.Spikes.Swagger
         {
             var httpConfiguration = new HttpConfiguration();
             WebApiConfig.Register(httpConfiguration);
+            SwaggerConfig.Register(httpConfiguration);
             appBuilder.UseWebApi(httpConfiguration);
         }
     }
