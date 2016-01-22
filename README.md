@@ -1,7 +1,9 @@
-# ken.Spikes.Swagger [WIP]
+# ken.Spikes.Swagger
 Playing with Swagger in NodeJs and C#
 
 ## NodeJs
+
+[https://github.com/swagger-api/swagger-node](https://github.com/swagger-api/swagger-node)
 
 * npm install -g swagger
 * swagger project create ken-spikes-swagger
@@ -10,6 +12,8 @@ Playing with Swagger in NodeJs and C#
 * npm start
 
 <h2>C#</h2>
+
+[https://github.com/domaindrivendev/Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)
 
 * ASP.NET Web Application > Empty
 * Install-Package Microsoft.AspNet.WebApi.Owin

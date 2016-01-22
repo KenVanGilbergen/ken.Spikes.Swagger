@@ -5,9 +5,10 @@ namespace ken.Spikes.Swagger.Controllers
 {
     public class HelloController : ApiController
     {
-        public string Get(string name)
+        public IHttpActionResult Get(string name)
         {
-            return String.Format("Hello, {0}!", name);
+            var hello = String.Format("Hello, {0}!", name);
+            return Json(hello);
         }
     }
 }
