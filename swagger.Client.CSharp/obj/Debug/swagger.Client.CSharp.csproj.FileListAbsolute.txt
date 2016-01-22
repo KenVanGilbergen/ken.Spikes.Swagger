@@ -1,0 +1,2 @@
+D:\Sources.Ken\ken.Spikes.Swagger\swagger.Client.CSharp\bin\Debug\swagger.Client.CSharp.exe.config
+D:\Sources.Ken\ken.Spikes.Swagger\swagger.Client.CSharp\obj\Debug\swagger.Client.CSharp.csprojResolveAssemblyReference.cache
