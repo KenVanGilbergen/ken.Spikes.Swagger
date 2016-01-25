@@ -1,0 +1,15 @@
+{
+  "name": "swagger-client-web",
+  "version": "1.0.0",
+  "description": "Consume swagger api from webpage served by express.",
+  "main": "app.js",
+  "scripts": {
+	"start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ken Van Gilbergen",
+  "license": "LGPL-3.0",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
