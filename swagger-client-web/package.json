@@ -2,14 +2,22 @@
   "name": "swagger-client-web",
   "version": "1.0.0",
   "description": "Consume swagger api from webpage served by express.",
-  "main": "app.js",
+  "main": "lib/app.js",
   "scripts": {
-	"start": "node app.js",
+    "prestart": "grunt && chrome http://localhost:3000",
+    "start": "node lib/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ken Van Gilbergen",
   "license": "LGPL-3.0",
   "dependencies": {
     "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-swagger-js-codegen": "^0.4.5",
+    "load-grunt-tasks": "^3.4.0",
+    "swagger-js-codegen": "^1.1.8",
+    "time-grunt": "^1.3.0"
   }
 }

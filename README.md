@@ -19,3 +19,11 @@ Playing with Swagger in NodeJs and C#
 * Install-Package Microsoft.AspNet.WebApi.Owin
 * Install-Package Microsoft.Owin.Host.SystemWeb
 * Install-Package Swashbuckle.Core.Net45
+
+## More about Swagger
+
+* [http://swagger.io/](http://swagger.io/)
+* [Open API Initiative](https://openapis.org/)
+* [Swagger 2.0 = OpenAPI 2.0 Specification](https://github.com/OAI/OpenAPI-Specification)
+* [https://github.com/wcandillon/grunt-swagger-js-codegen](https://github.com/wcandillon/grunt-swagger-js-codegen)
+
