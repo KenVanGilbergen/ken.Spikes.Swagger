@@ -18,11 +18,14 @@
   <ItemGroup>
     <Compile Include="gruntfile.js" />
     <Content Include="package.json" />
+    <Compile Include="gruntTasks\copy.js" />
+    <Compile Include="gruntTasks\clean.js" />
+    <Compile Include="gruntTasks\swagger-js-codegen.js" />
     <Compile Include="lib\server.js" />
-    <Content Include="_site\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
+    <Folder Include="gruntTasks\" />
     <Folder Include="src\" />
     <Folder Include="src\api\" />
     <Folder Include="_site" />

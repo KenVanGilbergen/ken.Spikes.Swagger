@@ -1,27 +1,21 @@
-module.exports = function (grunt) {
-    
-    require('load-grunt-tasks')(grunt);
+module.exports = function(grunt) {
+
     require('time-grunt')(grunt);
-    
-    grunt.initConfig({
-        'swagger-js-codegen': {
-            queries: {
-                options: {
-                    apis: [
-                        {
-                            swagger: 'http://127.0.0.1:10010/swagger',
-                            className: 'HelloWorld',
-                            moduleName: 'HelloWorld', // This is the model and file name
-                            angularjs: true
-                        }
-                    ],
-                    dest: 'src/api'
-                },
-                dist: {
-                }
+    require('load-grunt-tasks')(grunt);
+    grunt.task.loadTasks('gruntTasks');
+
+    grunt.config.merge({
+        settings: {
+            build: {
+                src: 'src',
+                dst: '_site'
+            },
+            swagger: {
+                dst: 'src/api'
             }
         }
     });
 
-    grunt.registerTask('default', ['swagger-js-codegen']);
+    grunt.registerTask('default', ['clean', 'swagger-js-codegen', 'copy']);
+
 }
