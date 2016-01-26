@@ -43,5 +43,6 @@ _Resharper.*
 /ken.Spikes.Swagger/obj
 /swagger.Client.CSharp/bin
 /swagger.Client.CSharp/obj
+/swagger-client-web/_site
 
 
