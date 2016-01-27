@@ -11,11 +11,18 @@ module.exports = function(grunt) {
                 dst: '_site'
             },
             swagger: {
-                dst: 'src/api'
+                dst: 'src/api',
+                endpoints: {
+                    helloWorld: 'http://127.0.0.1:10010/swagger'
+                }
             }
         }
     });
+    
+    grunt.registerTask('rebuild', ['clean', 'swagger-js-codegen', 'copy']);
+    grunt.registerTask('serve', ['rebuild', 'express', 'open:serve']);
+    grunt.registerTask('refresh', ['serve', 'watch']);
 
-    grunt.registerTask('default', ['clean', 'swagger-js-codegen', 'copy']);
+    grunt.registerTask('default', ['rebuild']);
 
 }
