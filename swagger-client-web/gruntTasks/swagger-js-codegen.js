@@ -8,8 +8,8 @@ module.exports = function(grunt) {
                 apis: [
                     {
                         swagger: '<%= settings.swagger.endpoints.helloWorld %>',
-                        className: 'HelloWorld',
-                        moduleName: 'HelloWorld', // This is the model and file name
+                        className: 'HelloWorldApi',
+                        moduleName: 'HelloWorldApi', // This is the model and file name
                         angularjs: true
                     }
                 ],

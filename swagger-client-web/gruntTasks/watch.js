@@ -7,6 +7,10 @@ module.exports = function(grunt) {
             files: ['<%= settings.build.src %>/**/*.html'],
             tasks: ['newer:copy:html'],
         },
+        js: {
+            files: ['<%= settings.build.src %>/**/*.js'],
+            tasks: ['newer:copy:js'],
+        },
         serve: {
             options: {
                 livereload: {
@@ -14,7 +18,7 @@ module.exports = function(grunt) {
                     port: 8000
                 }
             },
-            files: ['<%= settings.build.dst %>/**/*.html']
+            files: ['<%= settings.build.dst %>/**/*.*']
         },
     });
 

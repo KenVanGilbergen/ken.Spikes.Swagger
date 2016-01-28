@@ -10,6 +10,7 @@ Playing with Swagger in NodeJs and C#
 * swagger project edit
 * npm test
 * npm start
+* npm install --save cors
 
 <h2>C#</h2>
 

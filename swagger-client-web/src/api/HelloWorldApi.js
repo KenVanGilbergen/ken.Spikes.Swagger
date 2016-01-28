@@ -1,20 +1,20 @@
 /*jshint -W069 */
 /*global angular:false */
-angular.module('HelloWorld', [])
-    .factory('HelloWorld', ['$q', '$http', '$rootScope', function($q, $http, $rootScope) {
+angular.module('HelloWorldApi', [])
+    .factory('HelloWorldApi', ['$q', '$http', '$rootScope', function($q, $http, $rootScope) {
         'use strict';
 
         /**
          * 
-         * @class HelloWorld
+         * @class HelloWorldApi
          * @param {(string|object)} [domainOrOptions] - The project domain or options object. If object, see the object's optional properties.
          * @param {string} [domainOrOptions.domain] - The project domain
          * @param {string} [domainOrOptions.cache] - An angularjs cache implementation
          * @param {object} [domainOrOptions.token] - auth token - object with value property and optional headerOrQueryName and isQuery properties
          * @param {string} [cache] - An angularjs cache implementation
          */
-        var HelloWorld = (function() {
-            function HelloWorld(options, cache) {
+        var HelloWorldApi = (function() {
+            function HelloWorldApi(options, cache) {
                 var domain = (typeof options === 'object') ? options.domain : options;
                 this.domain = typeof(domain) === 'string' ? domain : 'http://localhost:10010/';
                 if (this.domain.length === 0) {
@@ -24,7 +24,7 @@ angular.module('HelloWorld', [])
                 this.cache = cache;
             }
 
-            HelloWorld.prototype.$on = function($scope, path, handler) {
+            HelloWorldApi.prototype.$on = function($scope, path, handler) {
                 var url = domain + path;
                 $scope.$on(url, function() {
                     handler();
@@ -32,14 +32,14 @@ angular.module('HelloWorld', [])
                 return this;
             };
 
-            HelloWorld.prototype.$broadcast = function(path) {
+            HelloWorldApi.prototype.$broadcast = function(path) {
                 var url = domain + path;
                 //cache.remove(url);
                 $rootScope.$broadcast(url);
                 return this;
             };
 
-            HelloWorld.transformRequest = function(obj) {
+            HelloWorldApi.transformRequest = function(obj) {
                 var str = [];
                 for (var p in obj) {
                     var val = obj[p];
@@ -57,11 +57,11 @@ angular.module('HelloWorld', [])
             /**
              * Returns 'Hello' to the caller
              * @method
-             * @name HelloWorld#hello
+             * @name HelloWorldApi#hello
              * @param {string} name - The name of the person to whom to say hello
              * 
              */
-            HelloWorld.prototype.hello = function(parameters) {
+            HelloWorldApi.prototype.hello = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -104,7 +104,7 @@ angular.module('HelloWorld', [])
                 if (Object.keys(form).length > 0) {
                     options.data = form;
                     options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-                    options.transformRequest = HelloWorld.transformRequest;
+                    options.transformRequest = HelloWorldApi.transformRequest;
                 }
                 $http(options)
                     .success(function(data, status, headers, config) {
@@ -125,8 +125,8 @@ angular.module('HelloWorld', [])
                 return deferred.promise;
             };
 
-            return HelloWorld;
+            return HelloWorldApi;
         })();
 
-        return HelloWorld;
+        return HelloWorldApi;
     }]);
