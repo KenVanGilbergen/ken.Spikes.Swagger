@@ -1,5 +1,5 @@
 ﻿angular.module('app', [
-    'HelloWorldApi'
+    'api.HelloWorld'
 ]);
 
 

@@ -1,4 +1,4 @@
-# ken.Spikes.Swagger
+# ken.Spikes.Swagger [WIP]
 Playing with Swagger in NodeJs and C#
 
 ## NodeJs
@@ -26,5 +26,23 @@ Playing with Swagger in NodeJs and C#
 * [http://swagger.io/](http://swagger.io/)
 * [Open API Initiative](https://openapis.org/)
 * [Swagger 2.0 = OpenAPI 2.0 Specification](https://github.com/OAI/OpenAPI-Specification)
-* [https://github.com/wcandillon/grunt-swagger-js-codegen](https://github.com/wcandillon/grunt-swagger-js-codegen)
 
+**C# Clients**
+
+* [http://editor.swagger.io/](http://editor.swagger.io/) -> problems when trying to use generated code
+
+**Javascript Clients**
+
+Static
+
+* [https://github.com/wcandillon/swagger-js-codegen](https://github.com/wcandillon/swagger-js-codegen)
+* [https://github.com/wcandillon/grunt-swagger-js-codegen](https://github.com/wcandillon/grunt-swagger-js-codegen) -> some bugs with default paramaters and cachefactory
+
+Dynamic
+
+* [https://github.com/swagger-api/swagger-js](https://github.com/swagger-api/swagger-js)
+
+**TODO**
+
+* Fix the issues
+* Add https://github.com/signalfx/swagger-validate

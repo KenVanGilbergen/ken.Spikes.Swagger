@@ -2,7 +2,8 @@
 <html ng-app="app">
 <head>
     <script src="/vendor/angularjs/1.4.9/angular.min.js"></script>
-    <script src="/api/HelloWorldApi.js"></script>
+    <script src="/vendor/swagger-client-web/2.1.11/swagger-client.min.js"></script>
+    <script src="/api/helloWorldFactory.js"></script>
     <script src="/app/app.js"></script>
     <script src="/app/indexController.js"></script>
 </head>
@@ -10,8 +11,25 @@
     <div ng-controller="IndexController as vm">
         <label>Name:</label>
         <input type="text" placeholder="Enter a name here" ng-model="vm.name" ng-model-options="{ debounce: 1000 }">
-        <hr>
+        <hr />
         <h1>{{vm.greeting}}</h1>
+        <hr />
+        <div>{{vm.cache.info()}}</div>
+        <hr />
+        <div>{{vm.swaggerDynamic}}</div>
     </div>
+    
+    <script type="text/javascript">
+        window.client = new SwaggerClient({
+            url: 'http://127.0.0.1:10010/swagger',
+            success: function () {
+                client.default.hello({ name: 'DynamicNameFromWindow' }, { responseContentType: 'application/json' }, function (response) {
+                    document.getElementById("swaggerGetDataDynamically").innerHTML = JSON.stringify(response.data);
+                });
+            }
+        });
+    </script>
+    <hr />
+    <div id="swaggerGetDataDynamically"></div>
 </body>
 </html>
